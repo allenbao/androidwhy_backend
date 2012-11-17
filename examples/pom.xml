@@ -16,5 +16,5 @@
         <module>helloworld</module>
         <module>quickstart</module>
 		<module>showcase</module>
-  </modules>
+    </modules>
 </project>
