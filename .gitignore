@@ -10,4 +10,4 @@ eclipse-local.bat
 .idea/
 backend-project.iml
 *.iml
-*/*.DS_Store
+.DS_Store
