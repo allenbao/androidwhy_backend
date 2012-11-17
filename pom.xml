@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.androidwhy</groupId>
+	<artifactId>androidwhy_backend</artifactId>
+	<version>1.0.0</version>
+	<name>AndroidWhy::Backend</name>
+	<packaging>pom</packaging>
+
+	<description>androidwhy_backend is a Spring Framework based JavaEE application reference architecture. </description>
+	<url>hhttps://github.com/androidwhy/androidwhy_backend.git</url>
+	<inceptionYear>2009-2012</inceptionYear>
+	<organization>
+		<name>AndroidWhy</name>
+		<url>http://www.androidwhy.com</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<id>gordon</id>
+			<name>Gordon.Huang</name>
+			<email>gxing.huang@gmail.com</email>
+			<organization>Androidwhy</organization>
+			<roles>
+				<role>Project lead</role>
+			</roles>
+			<timezone>+8</timezone>
+		</developer>
+	</developers>
+
+	<modules>
+		<module>modules</module>
+		<module>examples</module>
+    </modules>
+</project>
