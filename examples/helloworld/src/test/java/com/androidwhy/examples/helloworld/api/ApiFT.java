@@ -1,8 +1,7 @@
-package com.androidwhy.examples.helloworld.functional.api;
+package com.androidwhy.examples.helloworld.api;
 
 import com.androidwhy.examples.helloworld.data.TaskData;
 import com.androidwhy.examples.helloworld.entity.Task;
-import com.androidwhy.examples.helloworld.functional.BaseFunctionalTestCase;
 import com.androidwhy.modules.mapper.JsonMapper;
 import com.androidwhy.modules.test.category.Smoke;
 import org.apache.commons.lang3.StringUtils;
@@ -21,11 +20,11 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 /**
- * 任务管理的功能测试, 测试页面JavaScript及主要用户故事流程.
+ * 任务管理的功能测试
  * 
  * @author Gordon
  */
-public class ApiFT extends BaseFunctionalTestCase {
+public class ApiFT {
 
 	private final RestTemplate restTemplate = new RestTemplate();
 
@@ -34,6 +33,7 @@ public class ApiFT extends BaseFunctionalTestCase {
 	private static class TaskList extends ArrayList<Task> {
 	};
 
+    private static String baseUrl = "http://localhost:8888/";
 	private static String resoureUrl;
 
 	@BeforeClass
