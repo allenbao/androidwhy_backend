@@ -6,11 +6,20 @@
   3.backend-extension;
   4.backend-test;
   
-  And 3 major examples:
+  And 4 major examples:
   1.basicservice;
   2.basicweb;
   3.helloworld;
   4.showcase.
+
+  -------------------------------------------------
+  Get start:
+
+  1,
+  git clone https://github.com/gordonhuang/androidwhy_backend.git
+
+  2,
+  mvn install -Dmaven.test.skip=true
 
   -------------------------------------------------
   Get start from example project:
@@ -26,7 +35,7 @@
   mvn archetype:generate -DarchetypeCatalog=local
  
   -------------------------------------------------
-  http://www.androidwhy.com
+  欢迎访问：http://www.androidwhy.com
 
 
 
