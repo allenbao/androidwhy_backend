@@ -13,3 +13,16 @@
  
 -------------------------------
   http://www.androidwhy.com
+
+Get start from example project:
+
+1,
+mvn archetype:create-from-project
+
+2,
+cd target/generated-sources/archetype
+mvn install
+
+3,
+mvn archetype:generate -DarchetypeCatalog=local
+

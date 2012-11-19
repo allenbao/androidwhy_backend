@@ -13,8 +13,9 @@
 	<packaging>pom</packaging>
 
 	<modules>
+        <module>basicservice</module>
+        <module>basicweb</module>
         <module>helloworld</module>
-        <module>quickstart</module>
 		<module>showcase</module>
     </modules>
 </project>
