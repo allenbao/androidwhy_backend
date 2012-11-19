@@ -7,22 +7,26 @@
   4.backend-test;
   
   And 3 major examples:
-  1. helloworld;
-  2. quickstart;
-  3. showcase.
+  1.basicservice;
+  2.basicweb;
+  3.helloworld;
+  4.showcase.
+
+  -------------------------------------------------
+  Get start from example project:
+
+  1,
+  mvn archetype:create-from-project
+
+  2,
+  cd target/generated-sources/archetype
+  mvn install
+
+  3,
+  mvn archetype:generate -DarchetypeCatalog=local
  
--------------------------------
+  -------------------------------------------------
   http://www.androidwhy.com
 
-Get start from example project:
 
-1,
-mvn archetype:create-from-project
-
-2,
-cd target/generated-sources/archetype
-mvn install
-
-3,
-mvn archetype:generate -DarchetypeCatalog=local
 
