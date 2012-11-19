@@ -19,6 +19,9 @@
   git clone https://github.com/gordonhuang/androidwhy_backend.git
 
   2,
+  cd androidwhy_backend
+
+  3,
   mvn install -Dmaven.test.skip=true
 
   -------------------------------------------------
