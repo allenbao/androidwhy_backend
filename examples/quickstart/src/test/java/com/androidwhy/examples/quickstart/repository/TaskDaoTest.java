@@ -11,7 +11,7 @@ import org.springframework.test.context.ContextConfiguration;
 
 import static org.junit.Assert.assertEquals;
 
-@ContextConfiguration(locations = {"/applicationContext-a.xml"})
+@ContextConfiguration(locations = {"/applicationContext-default.xml"})
 public class TaskDaoTest extends SpringTransactionalTestCase {
 
 	@Autowired

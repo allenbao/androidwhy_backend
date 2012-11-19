@@ -13,7 +13,7 @@ import javax.persistence.metamodel.Metamodel;
 
 import static org.junit.Assert.assertTrue;
 
-@ContextConfiguration(locations = {"/applicationContext-a.xml"})
+@ContextConfiguration(locations = {"/applicationContext-default.xml"})
 public class JpaMappingTest extends SpringTransactionalTestCase {
 
 	private static Logger logger = LoggerFactory.getLogger(JpaMappingTest.class);

@@ -4,7 +4,7 @@
 
     <description>导入quickstart中的applicationContext文件列表</description>
 
-    <import resource="applicationContext-a.xml" />
+    <import resource="applicationContext-default.xml" />
     <import resource="shiro/applicationContext-shiro.xml" />
 
 </beans>
