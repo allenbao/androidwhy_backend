@@ -1,8 +1,7 @@
-package com.androidwhy.examples.quickstart.functional.rest;
+package com.androidwhy.examples.quickstart.api;
 
 import com.androidwhy.examples.quickstart.data.TaskData;
 import com.androidwhy.examples.quickstart.entity.Task;
-import com.androidwhy.examples.quickstart.functional.BaseFunctionalTestCase;
 import com.androidwhy.modules.mapper.JsonMapper;
 import com.androidwhy.modules.test.category.Smoke;
 import org.apache.commons.lang3.StringUtils;
@@ -25,7 +24,7 @@ import static org.junit.Assert.fail;
  * 
  * @author calvin
  */
-public class TaskRestFT extends BaseFunctionalTestCase {
+public class TaskRestFT {
 
 	private final RestTemplate restTemplate = new RestTemplate();
 
@@ -35,6 +34,8 @@ public class TaskRestFT extends BaseFunctionalTestCase {
 	};
 
 	private static String resoureUrl;
+
+    private static String baseUrl = "http//localhost:8888";
 
 	@BeforeClass
 	public static void initUrl() {
@@ -48,7 +49,7 @@ public class TaskRestFT extends BaseFunctionalTestCase {
 	@Category(Smoke.class)
 	public void listTasks() {
 		TaskList tasks = restTemplate.getForObject(resoureUrl, TaskList.class);
-		assertEquals(5, tasks.size());
+		assertEquals(4, tasks.size());
 		assertEquals("Study PlayFramework 2.0", tasks.get(0).getTitle());
 	}
 

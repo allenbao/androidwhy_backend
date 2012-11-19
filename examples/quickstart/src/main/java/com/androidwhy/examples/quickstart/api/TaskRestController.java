@@ -1,4 +1,4 @@
-package com.androidwhy.examples.quickstart.rest;
+package com.androidwhy.examples.quickstart.api;
 
 import com.androidwhy.examples.quickstart.entity.Task;
 import com.androidwhy.examples.quickstart.service.task.TaskService;
