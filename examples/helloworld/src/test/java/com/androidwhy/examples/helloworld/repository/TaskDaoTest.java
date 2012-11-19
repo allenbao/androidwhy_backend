@@ -11,7 +11,7 @@ import org.springframework.test.context.ContextConfiguration;
 import com.androidwhy.examples.helloworld.entity.Task;
 import com.androidwhy.modules.test.spring.SpringTransactionalTestCase;
 
-@ContextConfiguration(locations = {"/applicationContext-a.xml"})
+@ContextConfiguration(locations = {"/applicationContext-default.xml"})
 public class TaskDaoTest extends SpringTransactionalTestCase {
 
 	@Autowired
