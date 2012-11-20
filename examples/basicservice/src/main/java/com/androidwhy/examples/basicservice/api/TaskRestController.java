@@ -2,6 +2,7 @@ package com.androidwhy.examples.basicservice.api;
 
 import com.androidwhy.examples.basicservice.entity.Task;
 import com.androidwhy.examples.basicservice.service.task.TaskService;
+import com.androidwhy.modules.beanvalidator.BeanValidators;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -10,7 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-import com.androidwhy.modules.beanvalidator.BeanValidators;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validator;
