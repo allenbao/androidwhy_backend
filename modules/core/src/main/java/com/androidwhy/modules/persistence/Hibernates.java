@@ -10,6 +10,7 @@ import org.hibernate.Hibernate;
 import org.hibernate.dialect.H2Dialect;
 import org.hibernate.dialect.MySQL5InnoDBDialect;
 import org.hibernate.dialect.Oracle10gDialect;
+import org.hibernate.dialect.SQLServer2008Dialect;
 
 public class Hibernates {
 
@@ -39,7 +40,9 @@ public class Hibernates {
 			return MySQL5InnoDBDialect.class.getName();
 		} else if (StringUtils.contains(jdbcUrl, ":oracle:")) {
 			return Oracle10gDialect.class.getName();
-		} else {
+		} else if (StringUtils.contains(jdbcUrl, ":sqlserver:")) {
+            return SQLServer2008Dialect.class.getName();
+        } else {
 			throw new IllegalArgumentException("Unknown Database of " + jdbcUrl);
 		}
 	}
