@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 /**
- * ZhangWo All Rights Reserved.
+ * Androidwhy.com All Rights Reserved.
  * User: gordon
  * Date: 9/26/12
  * Time: 11:56 AM
@@ -18,7 +18,6 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class LogoutLogicEngine extends LogicEngine {
-
 
     @Override
     public ResponseEntity logicHandler(BaseRequest baseRequest) {

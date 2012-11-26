@@ -1,7 +1,7 @@
 package com.androidwhy.examples.basicservice.api.request;
 
 /**
- * ZhangWo All Rights Reserved.
+ * Androidwhy.com All Rights Reserved.
  * User: gordon
  * Date: 9/21/12
  * Time: 5:25 PM
@@ -14,11 +14,8 @@ public class BaseRequest {
     private String udid;
     private Long timestamp;
     private String secretKey;
-    private int activeStatus;
     private String deviceCode;
-    private String clientNo;
-    private UaInfo ua;
-    private VersionInfo version;
+    private int appVersionCode;
 
     public BaseRequest() {
        //just for my test
@@ -31,19 +28,8 @@ public class BaseRequest {
         this.timestamp = System.currentTimeMillis();
 
         this.secretKey = "Keiflkvnei2083^&8*^%$@)(*#@$%E";
-        this.activeStatus = 1;
         this.deviceCode = "a device code";
-        this.clientNo = "ZhangWo";
-
-        UaInfo uaInfo = new UaInfo();
-        uaInfo.setSystemName("Gordon iOS");
-        uaInfo.setSystemVersion("V6.0.1");
-        uaInfo.setBand("Gordon Band");
-        this.ua = uaInfo;
-
-        VersionInfo versionInfo = new VersionInfo();
-        versionInfo.setAppVersionCode(100);
-        this.version = versionInfo;
+        this.appVersionCode = 100;
     }
 
     public String getActionCode() {
@@ -86,14 +72,6 @@ public class BaseRequest {
         this.secretKey = secretKey;
     }
 
-    public int getActiveStatus() {
-        return activeStatus;
-    }
-
-    public void setActiveStatus(int activeStatus) {
-        this.activeStatus = activeStatus;
-    }
-
     public String getDeviceCode() {
         return deviceCode;
     }
@@ -102,27 +80,11 @@ public class BaseRequest {
         this.deviceCode = deviceCode;
     }
 
-    public String getClientNo() {
-        return clientNo;
+    public int getAppVersionCode() {
+        return appVersionCode;
     }
 
-    public void setClientNo(String clientNo) {
-        this.clientNo = clientNo;
-    }
-
-    public UaInfo getUa() {
-        return ua;
-    }
-
-    public void setUa(UaInfo ua) {
-        this.ua = ua;
-    }
-
-    public VersionInfo getVersion() {
-        return version;
-    }
-
-    public void setVersion(VersionInfo version) {
-        this.version = version;
+    public void setAppVersionCode(int appVersionCode) {
+        this.appVersionCode = appVersionCode;
     }
 }

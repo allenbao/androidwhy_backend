@@ -1,7 +1,7 @@
 package com.androidwhy.examples.basicservice.utils.gp;
 
 /**
- * ZhangWo All Rights Reserved.
+ * Androidwhy.com All Rights Reserved.
  * User: gordon
  * Date: 9/26/12
  * Time: 9:43 AM

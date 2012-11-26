@@ -4,18 +4,15 @@ import com.androidwhy.examples.basicservice.entity.User;
 import com.androidwhy.examples.basicservice.repository.TaskDao;
 import com.androidwhy.examples.basicservice.repository.UserDao;
 import com.androidwhy.examples.basicservice.service.ServiceException;
+import com.androidwhy.modules.security.utils.Digests;
+import com.androidwhy.modules.utils.DateProvider;
+import com.androidwhy.modules.utils.Encodes;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.shiro.SecurityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-import com.androidwhy.examples.basicservice.service.ServiceException;
-import com.androidwhy.examples.basicservice.service.account.ShiroDbRealm.ShiroUser;
-import com.androidwhy.modules.security.utils.Digests;
-import com.androidwhy.modules.utils.DateProvider;
-import com.androidwhy.modules.utils.Encodes;
 
 import java.util.List;
 
@@ -71,7 +68,7 @@ public class AccountService {
 	@Transactional(readOnly = false)
 	public void deleteUser(Long id) {
 		if (isSupervisor(id)) {
-			logger.warn("操作员{}尝试删除超级管理员用户", getCurrentUserName());
+			logger.warn("操作员尝试删除超级管理员用户");
 			throw new ServiceException("不能删除超级管理员用户");
 		}
 		userDao.delete(id);
@@ -84,14 +81,6 @@ public class AccountService {
 	 */
 	private boolean isSupervisor(Long id) {
 		return id == 1;
-	}
-
-	/**
-	 * 取出Shiro中的当前用户LoginName.
-	 */
-	private String getCurrentUserName() {
-		ShiroUser user = (ShiroUser) SecurityUtils.getSubject().getPrincipal();
-		return user.loginName;
 	}
 
 	/**

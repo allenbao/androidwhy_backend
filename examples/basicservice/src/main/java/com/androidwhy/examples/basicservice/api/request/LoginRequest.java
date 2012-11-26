@@ -1,7 +1,9 @@
 package com.androidwhy.examples.basicservice.api.request;
 
+import com.androidwhy.examples.basicservice.utils.gp.GpConstants;
+
 /**
- * ZhangWo All Rights Reserved.
+ * Androidwhy.com All Rights Reserved.
  * User: gordon
  * Date: 9/24/12
  * Time: 2:54 PM
@@ -11,6 +13,10 @@ public class LoginRequest extends BaseRequest {
 
     private String username;
     private String password;
+
+    public LoginRequest() {
+        this.actionCode = GpConstants.LOGIN_ACTION_CODE;
+    }
 
     public String getUsername() {
         return username;

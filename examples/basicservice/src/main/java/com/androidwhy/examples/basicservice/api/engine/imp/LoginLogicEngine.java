@@ -4,7 +4,6 @@ import com.androidwhy.examples.basicservice.api.request.BaseRequest;
 import com.androidwhy.examples.basicservice.api.request.LoginRequest;
 import com.androidwhy.examples.basicservice.api.response.LoginResponse;
 import com.androidwhy.examples.basicservice.service.account.AccountService;
-import com.androidwhy.examples.basicservice.service.task.TaskService;
 import com.androidwhy.examples.basicservice.utils.gp.GpConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +15,7 @@ import org.springframework.stereotype.Component;
 import java.util.UUID;
 
 /**
- * ZhangWo All Rights Reserved.
+ * Androidwhy.com All Rights Reserved.
  * User: gordon
  * Date: 9/26/12
  * Time: 11:50 AM
@@ -29,9 +28,6 @@ public class LoginLogicEngine extends LogicEngine {
 
     @Autowired
     private AccountService accountService;
-
-    @Autowired
-    private TaskService taskService;
 
     @Override
     public ResponseEntity logicHandler(BaseRequest baseRequest) {

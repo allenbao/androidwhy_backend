@@ -31,8 +31,8 @@ public class LogicEngine implements ILogicEngine<BaseRequest> {
 
         String actionCode = baseRequest.getActionCode();
 
-        String secretKeyBeforMd5 = baseRequest.getActionCode() + baseRequest.getVersion().getAppVersionCode()
-                + baseRequest.getTimestamp() + GpConstants.KEY + baseRequest.getClientNo();
+        String secretKeyBeforMd5 = baseRequest.getActionCode() + baseRequest.getAppVersionCode()
+                + baseRequest.getTimestamp() + GpConstants.KEY;
         String secretKeyAfterMd5 = MD5Util.getMD5Str(secretKeyBeforMd5);
 
         if (!secretKeyAfterMd5.equals(baseRequest.getSecretKey())){//非法请求
@@ -42,45 +42,6 @@ public class LogicEngine implements ILogicEngine<BaseRequest> {
             response.setCurrentActionCode(baseRequest.getActionCode());
             return new ResponseEntity(response, HttpStatus.OK);
         }
-
-        /*
-        String sessionToken = baseRequest.getSessionToken();
-        if (!actionCode.equals(GpConstants.LOGIN_ACTION_CODE)){
-            if (actionCode.equals(GpConstants.UPDATE_ACTION_CODE)
-                    || actionCode.equals(GpConstants.REGISTER_VERIFICATION_CODE_ACTION_CODE)
-                    || actionCode.equals(GpConstants.REGISTER_ACTION_CODE)
-                    || actionCode.equals(GpConstants.RESET_PASSWORD_VERIFICATION_CODE_ACTION_CODE)
-                    || actionCode.equals(GpConstants.RESET_PASSWORD_ACTION_CODE)
-                    ) {
-                return null;
-            }
-
-            if (StringUtils.isBlank(sessionToken)){
-                BaseResponse response = new BaseResponse();
-                response.setRetCode("-1003");
-                response.setErrorInfo("请您先登录");
-                response.setCurrentActionCode(baseRequest.getActionCode());
-                return new ResponseEntity(response, HttpStatus.OK);
-            }
-
-            User user = accountService.findUserBySessionToken(sessionToken);
-            if (user == null){//异地登录
-                BaseResponse response = new BaseResponse();
-                response.setRetCode("-1004");
-                response.setErrorInfo("您的帐户异地登录或修改过密码，请重新登录");
-                response.setCurrentActionCode(baseRequest.getActionCode());
-                return new ResponseEntity(response, HttpStatus.OK);
-            }
-
-            if (!user.getEnable()) {
-                BaseResponse response = new BaseResponse();
-                response.setRetCode("1012");
-                response.setErrorInfo("用户已被锁定，请联系管理员");
-                response.setCurrentActionCode(baseRequest.getActionCode());
-                return new ResponseEntity(response, HttpStatus.OK);
-            }
-        }
-        */
 
         return null;
     }

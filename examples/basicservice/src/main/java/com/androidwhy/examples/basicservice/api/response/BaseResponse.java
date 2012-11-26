@@ -1,7 +1,7 @@
 package com.androidwhy.examples.basicservice.api.response;
 
 /**
- * ZhangWo All Rights Reserved.
+ * Androidwhy.com All Rights Reserved.
  * User: gordon
  * Date: 9/21/12
  * Time: 8:34 PM
