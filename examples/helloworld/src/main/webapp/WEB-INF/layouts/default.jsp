@@ -12,8 +12,8 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
-    <meta name="author" content="Muhammad Usman">
+    <meta name="description" content="Androidwhy_backend是一个开源的Java后端项目。">
+    <meta name="author" content="Androidwhy">
 
     <!-- The styles -->
     <link href="${ctx}/static/css/bootstrap-cerulean.css" rel="stylesheet">
