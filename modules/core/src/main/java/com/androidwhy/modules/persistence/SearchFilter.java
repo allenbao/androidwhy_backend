@@ -1,11 +1,10 @@
 package com.androidwhy.modules.persistence;
 
-import java.util.Map;
-import java.util.Map.Entry;
-
+import com.google.common.collect.Maps;
 import org.apache.commons.lang3.StringUtils;
 
-import com.google.common.collect.Maps;
+import java.util.Map;
+import java.util.Map.Entry;
 
 public class SearchFilter {
 
@@ -24,6 +23,10 @@ public class SearchFilter {
 	}
 
 	public static Map<String, SearchFilter> parse(Map<String, Object> searchParams) {
+        if (searchParams == null) {
+            return null;
+        }
+
 		Map<String, SearchFilter> filters = Maps.newHashMap();
 
 		for (Entry<String, Object> entry : searchParams.entrySet()) {
