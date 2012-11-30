@@ -54,7 +54,7 @@
 
         <div class="row-fluid">
             <div class="span12 center login-header">
-                <h2>欢迎来到Webapp</h2>
+                <h2>欢迎来到Androidwhy</h2>
             </div><!--/span-->
         </div><!--/row-->
 
