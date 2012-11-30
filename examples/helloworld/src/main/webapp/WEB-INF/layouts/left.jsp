@@ -19,6 +19,8 @@
             <li><a href="error.html"><i class="icon-ban-circle"></i><span class="hidden-tablet"> Error Page</span></a></li>
             <li><a href="${ctx}/logout"><i class="icon-lock"></i><span class="hidden-tablet">登出系统</span></a></li>
         </ul>
-        <label id="for-is-ajax" class="hidden-tablet" for="is-ajax"><input id="is-ajax" type="checkbox"> Ajax on menu</label>
+        <!--
+        <label id="for-is-ajax" class="hidden-tablet">联系:18033442811</label>
+        -->
     </div><!--/.well -->
 </div><!--/span-->
