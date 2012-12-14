@@ -9,7 +9,7 @@ import java.util.Map.Entry;
 public class SearchFilter {
 
 	public enum Operator {
-		EQ, LIKE, GT, LT, GTE, LTE
+		EQ, LEFT_LIKE, LIKE, RIGHT_LIKE, GT, LT, GTE, LTE
 	}
 
 	public String fieldName;
