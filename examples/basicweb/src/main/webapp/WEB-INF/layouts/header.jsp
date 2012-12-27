@@ -4,7 +4,7 @@
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <div id="header">
 	<div id="title">
-	    <h1>BasicWeb<small>--demo</small>
+	    <h1>BasicWeb<small>androidwhy</small>
 	    <shiro:user>
 			<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
@@ -14,11 +14,11 @@
 			
 				<ul class="dropdown-menu">
 					<shiro:hasRole name="admin">
-						<li><a href="${ctx}/admin/user">Admin Users</a></li>
+						<li><a href="${ctx}/admin/user">用户管理</a></li>
 						<li class="divider"></li>
 					</shiro:hasRole>
-					<li><a href="${ctx}/profile">Edit Profile</a></li>
-					<li><a href="${ctx}/logout">Logout</a></li>
+					<li><a href="${ctx}/profile">修改资料</a></li>
+					<li><a href="${ctx}/logout">登出</a></li>
 				</ul>
 			</div>
 		</shiro:user>

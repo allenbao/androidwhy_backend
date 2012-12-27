@@ -6,15 +6,16 @@
 <html>
 <head>
 	<title>用户管理</title>
-	
-	<script>
-		$(document).ready(function() {
-			//聚焦第一个输入框
-			$("#name").focus();
-			//为inputForm注册validate函数
-			$("#inputForm").validate();
-		});
-	</script>
+
+    <script>
+        $(document).ready(function() {
+            //聚焦第一个输入框
+            $("#name").focus();
+            //为inputForm注册validate函数
+            $("#inputForm").validate();
+            $("#account-admin-user").addClass("active");
+        });
+    </script>
 </head>
 
 <body>
@@ -37,7 +38,7 @@
 			<div class="control-group">
 				<label for="plainPassword" class="control-label">密码:</label>
 				<div class="controls">
-					<input type="password" id="plainPassword" name="plainPassword" class="input-large" placeholder="...Leave it blank if no change"/>
+					<input type="password" id="plainPassword" name="plainPassword" class="input-large" placeholder="...留空则不修改"/>
 				</div>
 			</div>
 			<div class="control-group">
@@ -49,7 +50,7 @@
 			<div class="control-group">
 				<label class="control-label">注册日期:</label>
 				<div class="controls">
-					<span class="help-inline" style="padding:5px 0px"><fmt:formatDate value="${user.registerDate}" pattern="yyyy年MM月dd日  HH时mm分ss秒" /></span>
+					<span class="help-inline" style="padding:5px 0px"><fmt:formatDate value="${user.registerDate}" pattern="yyyy-MM-dd HH:mm:ss" /></span>
 				</div>
 			</div>
 			<div class="form-actions">

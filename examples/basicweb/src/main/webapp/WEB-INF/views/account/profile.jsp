@@ -12,7 +12,8 @@
 			$("#name").focus();
 			//为inputForm注册validate函数
 			$("#inputForm").validate();
-		});
+            $("#account-my-profile").addClass("active");
+        });
 	</script>
 </head>
 

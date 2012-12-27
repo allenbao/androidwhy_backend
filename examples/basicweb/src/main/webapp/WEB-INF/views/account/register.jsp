@@ -24,6 +24,7 @@
 				}
 			});
 		});
+        $("#account-tabk").addClass("active");
 	</script>
 </head>
 

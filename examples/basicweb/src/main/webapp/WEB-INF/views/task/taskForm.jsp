@@ -12,6 +12,7 @@
 			$("#task_title").focus();
 			//为inputForm注册validate函数
 			$("#inputForm").validate();
+            $("#account-my-task").addClass("active");
 		});
 	</script>
 </head>
