@@ -8,7 +8,7 @@
 	<title>任务管理</title>
     <script>
         $(document).ready(function() {
-            $("#account-my-task").addClass("active");
+            $("#account-my-task").addClass("active");   // 控制菜单点击后样式
         });
     </script>
 </head>
@@ -18,13 +18,11 @@
 		<div id="message" class="alert alert-success"><button data-dismiss="alert" class="close">×</button>${message}</div>
 	</c:if>
 	<div class="row">
-		<div class="span4 offset7">
 			<form class="form-search" action="#">
-				<label>名称：</label> <input type="text" name="search_LIKE_title" class="input-medium" value="${param.search_LIKE_title}"> 
+				<label>名称：</label> <input type="text" name="search_LIKE_title" class="input-medium" value="${param.search_LIKE_title}"  placeholder="姓名">
 				<button type="submit" class="btn" id="search_btn">Search</button>
+                <tags:sort/>
 		    </form>
-	    </div>
-	    <tags:sort/>
 	</div>
 	
 	<table id="contentTable" class="table table-striped table-bordered table-condensed">

@@ -24,10 +24,11 @@
     <link type="image/x-icon" href="${ctx}/static/images/favicon.ico" rel="shortcut icon">
     <link href="${ctx}/static/bootstrap/2.1.1/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
     <link href="${ctx}/static/jquery-validation/1.9.0/validate.css" type="text/css" rel="stylesheet" />
-    <link href="${ctx}/static/styles/GoddessPlan.css" type="text/css" rel="stylesheet" />
+    <link href="${ctx}/static/styles/default.css" type="text/css" rel="stylesheet" />
     <script src="${ctx}/static/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
     <script src="${ctx}/static/jquery-validation/1.9.0/jquery.validate.min.js" type="text/javascript"></script>
     <script src="${ctx}/static/jquery-validation/1.9.0/messages_bs_cn.js" type="text/javascript"></script>
+    <script src="${ctx}/static/scripts/jquery-palceholder.js" type="text/javascript"></script>
     <sitemesh:head />
     <script language="javascript">
         function p_del(message) {
@@ -44,7 +45,7 @@
 <body>
 <div class="container">
     <%@ include file="/WEB-INF/layouts/header.jsp"%>
-    <div class="row">
+    <div class="row" style="*width:960px;">
         <%@ include file="/WEB-INF/layouts/left.jsp"%><br>
         <div id="main" class="span10">
             <sitemesh:body />
